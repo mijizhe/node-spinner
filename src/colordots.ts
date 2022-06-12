@@ -5,9 +5,9 @@ import type { BarGenerator } from "@/bar"
 import { blue, cyan, green, magenta, red, yellow } from "@mijizhe/ansi-escape-sequences/colors"
 
 /**
- * colordots bar generator
+ * new a colordots bar generator
  */
-export const colordotsBarGenerator: BarGenerator = (() => {
+export const newColordotsBarGenerator = (): BarGenerator => {
   const frames = ["⣾", "⣽", "⣻", "⢿", "⡿", "⣟", "⣯", "⣷"]
   const colors = [red, green, yellow, blue, magenta, cyan]
   let frameIndex = 0
@@ -19,4 +19,4 @@ export const colordotsBarGenerator: BarGenerator = (() => {
     colorIndex = (colorIndex + 1) % colors.length
     return color(frame)
   }
-})()
+}

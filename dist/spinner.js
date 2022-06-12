@@ -154,5 +154,9 @@ class Spinner {
     process.stdout.write(format("%s %s\n", red("✖"), texts.join(" ")))
   }
 }
+/**
+ * new a spinner
+ */
+const newSpinner = (barGenerator, frameDuration = 80) => new Spinner(barGenerator, frameDuration)
 
-export { Spinner, SpinnerState }
+export { newSpinner, Spinner, SpinnerState }

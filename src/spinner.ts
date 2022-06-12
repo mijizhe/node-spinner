@@ -175,3 +175,8 @@ export class Spinner {
     process.stdout.write(format("%s %s\n", red("✖"), texts.join(" ")))
   }
 }
+
+/**
+ * new a spinner
+ */
+export const newSpinner = (barGenerator: BarGenerator, frameDuration = 80) => new Spinner(barGenerator, frameDuration)

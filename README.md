@@ -22,16 +22,16 @@ pnpm install @mijizhe/ziyan
 
 ```typescript
 import { magenta } from "@mijizhe/ansi-escape-sequences/colors"
-import { Spinner } from "@mijizhe/ziyan"
-import { colordotsBarGenerator } from "@mijizhe/ziyan/colordots"
+import { newSpinner } from "@mijizhe/ziyan"
+import { newColordotsBarGenerator } from "@mijizhe/ziyan/colordots"
 import { setTimeout as sleep } from "timers/promises"
 
-const spinner = new Spinner(colordotsBarGenerator)
+const spinner = newSpinner(newColordotsBarGenerator())
 
 await spinner.start("initializing…")
 await sleep(1500)
 
-await spinner.display("it takes a while.", "\n".repeat(5) + magenta(":)"))
+await spinner.display("it takes a while.", "\n".repeat(3) + magenta(":)"))
 await sleep(1500)
 
 await spinner.display("performing the step 1.")

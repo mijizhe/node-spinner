@@ -46,5 +46,9 @@ declare class Spinner {
    */
   fail(...texts: string[]): Promise<void>
 }
+/**
+ * new a spinner
+ */
+declare const newSpinner: (barGenerator: BarGenerator, frameDuration?: number) => Spinner
 
-export { Spinner, SpinnerState }
+export { newSpinner, Spinner, SpinnerState }

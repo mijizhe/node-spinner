@@ -5,8 +5,8 @@ import { B as BarGenerator } from "./bar-639b1c92.js"
  */
 
 /**
- * colordots bar generator
+ * new a colordots bar generator
  */
-declare const colordotsBarGenerator: BarGenerator
+declare const newColordotsBarGenerator: () => BarGenerator
 
-export { colordotsBarGenerator }
+export { newColordotsBarGenerator }

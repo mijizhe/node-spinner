@@ -1,5 +1,6 @@
 {
   "name": "@mijizhe/ziyan",
+  "description": "a lightweight and beautiful terminal spinner for Node.js.",
   "scripts": {
     "fmt": "dprint fmt",
     "lint": "eslint .",
