@@ -7,7 +7,6 @@
 <br/>
 <img src="screenshot.gif" width="500"/>
 <br/>
-<br/>
 
 ## Features
 
