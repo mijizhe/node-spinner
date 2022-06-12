@@ -1,8 +1,8 @@
 # 🌈
 
-> **ziyan**, a lightweight and beautiful terminal spinner for Node.js.
->
 > **紫烟**， 一个适用于Node.js的轻量且漂亮的终端微调器。
+>
+> **ziyan**, a lightweight and beautiful terminal spinner for Node.js.
 
 <br/>
 <img src="screenshot.gif" width="500"/>
