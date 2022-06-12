@@ -1,5 +1,5 @@
 import { dim, green, red } from "@mijizhe/ansi-escape-sequences/colors"
-import { Terminal } from "@mijizhe/ansi-escape-sequences/terminal"
+import { newTerminal } from "@mijizhe/ansi-escape-sequences/terminal"
 import { EventEmitter } from "events"
 import { setTimeout } from "timers/promises"
 import { format } from "util"
@@ -24,7 +24,7 @@ class Spinner {
   /**
    * terminal
    */
-  #terminal = new Terminal()
+  #terminal = newTerminal()
   /**
    * state
    */

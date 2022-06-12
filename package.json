@@ -32,7 +32,7 @@
     }
   },
   "dependencies": {
-    "@mijizhe/ansi-escape-sequences": "^0.0.3"
+    "@mijizhe/ansi-escape-sequences": "^0.0.5"
   },
   "devDependencies": {
     "@mijizhe/ziyan": "link:",
