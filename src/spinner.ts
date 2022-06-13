@@ -14,7 +14,7 @@ import { format } from "util"
 export enum SpinnerState {
   Pending = 0,
   Started = 1,
-  Stoped = 2,
+  Stopped = 2,
 }
 
 /**
@@ -131,7 +131,7 @@ export class Spinner {
         .cursorShow()
         .write()
       process.off("SIGINT", this.#sigintHandler)
-      this.#eventEmitter.emit("STOPED")
+      this.#eventEmitter.emit("STOPPED")
     })()
       .catch((err) => {
         throw err
@@ -144,8 +144,8 @@ export class Spinner {
   async stop() {
     if (this.#state === SpinnerState.Started) {
       process.removeListener("SIGINT", this.#sigintHandler)
-      this.#state = SpinnerState.Stoped
-      await new Promise((resolve) => this.#eventEmitter.once("STOPED", resolve))
+      this.#state = SpinnerState.Stopped
+      await new Promise((resolve) => this.#eventEmitter.once("STOPPED", resolve))
     }
   }
 

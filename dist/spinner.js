@@ -11,7 +11,7 @@ var SpinnerState
 ;(function(SpinnerState) {
   SpinnerState[SpinnerState["Pending"] = 0] = "Pending"
   SpinnerState[SpinnerState["Started"] = 1] = "Started"
-  SpinnerState[SpinnerState["Stoped"] = 2] = "Stoped"
+  SpinnerState[SpinnerState["Stopped"] = 2] = "Stopped"
 })(SpinnerState || (SpinnerState = {}))
 /**
  * spinner class
@@ -114,7 +114,7 @@ class Spinner {
         .cursorShow()
         .write()
       process.off("SIGINT", this.#sigintHandler)
-      this.#eventEmitter.emit("STOPED")
+      this.#eventEmitter.emit("STOPPED")
     })()
       .catch((err) => {
         throw err
@@ -126,8 +126,8 @@ class Spinner {
   async stop() {
     if (this.#state === SpinnerState.Started) {
       process.removeListener("SIGINT", this.#sigintHandler)
-      this.#state = SpinnerState.Stoped
-      await new Promise((resolve) => this.#eventEmitter.once("STOPED", resolve))
+      this.#state = SpinnerState.Stopped
+      await new Promise((resolve) => this.#eventEmitter.once("STOPPED", resolve))
     }
   }
   /**

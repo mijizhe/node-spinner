@@ -10,7 +10,7 @@ import { B as BarGenerator } from "./bar-639b1c92.js"
 declare enum SpinnerState {
   Pending = 0,
   Started = 1,
-  Stoped = 2,
+  Stopped = 2,
 }
 /**
  * spinner class
