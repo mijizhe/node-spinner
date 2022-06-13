@@ -121,7 +121,7 @@ export class Spinner {
           .text(this.#barGenerator(), this.#text)
           .eraseDown()
           .write()
-        this.#eventEmitter.emit("DISPLAYED")
+        this.#eventEmitter.emit("RENDERED")
         await sleep(this.#frameDuration)
       }
       await this
@@ -155,7 +155,7 @@ export class Spinner {
   async display(...texts: string[]) {
     if (this.#state === SpinnerState.Started) {
       this.#setText(texts)
-      await new Promise((resolve) => this.#eventEmitter.once("DISPLAYED", resolve))
+      await new Promise((resolve) => this.#eventEmitter.once("RENDERED", resolve))
     }
   }
 
